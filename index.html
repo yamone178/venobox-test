@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!--<div class="row">-->
+<!--    <div class="col-12 col-lg-12">-->
+<!--        <div class="back-color min-vh-100 w-100">-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<nav class="navbar navbar-expand-lg navbar-light back-nav sticky-top d-none">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">ENHYPEN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active  " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="">
+    <img src="../img/en.jpg" alt="" width="100%"   class="en-image">
+    <div class="back-color w-100 "></div>
+</div>
+<section class="container-fluid one">
+    <div class="row justify-content-center ">
+       <h2 class="text-secondary">GAllERY OF EN-</h2>
+       
+      <div class="col-12 col-lg-7">
+          <div class="gallery">
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/heesung1.jpg" alt=""></a>
+              <a href="../img/jake1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jake1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/heesung1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/sunghoon1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jake1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jay.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jake1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jake1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/heesung1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/sunghoon1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jake1.jpg" alt=""></a>
+              <a href="../img/heesung1.jpg" class="venobox" data-gall="gg">
+                  <img src="../img/jay.jpg" alt=""></a>
+          </div>
+      </div>
+          
+           
+    </div>
+</section>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../node_modules/venobox/dist/venobox.min.js"></script>
+<script src="../node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script>
+    new VenoBox({
+        selector: '.venobox'
+    });
+
+    let waypoint = new Waypoint({
+        element: document.querySelector('.one'),
+        handler: function (direction) {
+            if (direction == 'down') {
+                console.log("nav")
+                $('.navbar').removeClass('d-none');
+                $('.navbar').addClass('d-block');
+            }
+        else if(direction == 'up')
+    {
+        $('.navbar').addClass('d-none');
+        $('.navbar').removeClass('d-block');
+    }
+
+
+    }
+
+    })
+</script>
+</body>
+</html>
